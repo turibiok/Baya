@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BAYA a déménagé</title>
+<link rel="canonical" href="https://g-one-health-innov.github.io/Baya/">
+<meta name="robots" content="noindex, follow">
+<meta http-equiv="refresh" content="0; url=https://g-one-health-innov.github.io/Baya/">
+<style>
+  :root{--fond:#16102E;--texte:#FBFAFF;--doux:#C3BBE2;--violet:#6D3EF7;--rose:#F857A6}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;
+       background:var(--fond);color:var(--texte);
+       font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  main{max-width:560px;text-align:center}
+  .marque{font-size:14px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--rose);margin:0 0 12px}
+  h1{font-size:34px;line-height:1.2;margin:0 0 14px;font-weight:700}
+  p{font-size:17px;line-height:1.6;color:var(--doux);margin:0 0 24px}
+  a.bouton{display:inline-block;background:var(--violet);color:#fff;text-decoration:none;
+           padding:14px 28px;border-radius:12px;font-weight:600;font-size:17px}
+  a.bouton:hover{background:#5A2FD6}
+  .note{font-size:14px;color:#8A8299;margin-top:28px}
+  .note a{color:#C3BBE2}
+</style>
+</head>
+<body>
+<main>
+  <p class="marque">G-ONE Medtech Innovation</p>
+  <h1>BAYA a déménagé</h1>
+  <p>Le projet est désormais hébergé par l'organisation G-ONE. Vous allez être redirigé automatiquement. Si rien ne se passe, suivez le lien.</p>
+  <a class="bouton" id="lien" href="https://g-one-health-innov.github.io/Baya/">Ouvrir le site BAYA</a>
+  <p class="note">Ancienne adresse conservée pour les liens figurant dans les dossiers déjà transmis.<br>
+     Dépôt : <a href="https://github.com/G-one-health-innov/Baya">github.com/G-one-health-innov/Baya</a></p>
+</main>
+<script>
+  // Conserve le chemin et les paramètres demandés, pour qu'un lien profond
+  // cité dans un document arrive sur la bonne page et non sur l'accueil.
+  (function () {
+    var base = "https://g-one-health-innov.github.io/Baya/";
+    var prefixe = "/Baya/";
+    var chemin = location.pathname;
+    var suite = chemin.indexOf(prefixe) === 0 ? chemin.slice(prefixe.length) : "";
+    var cible = base + suite + location.search + location.hash;
+    document.getElementById("lien").href = cible;
+    location.replace(cible);
+  })();
+</script>
+</body>
+</html>
